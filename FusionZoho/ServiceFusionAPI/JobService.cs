@@ -21,7 +21,7 @@ namespace FusionZoho.ServiceFusionAPI
         static string grant_type = "client_credentials";
         static string client_id = "82ywTTJB2c8w1zZVuu";
         static string client_secret = "5gR9pCsYiVaDbb7M5335zn-YVvdOKwUr";
-        static string order_filter = "Unscheduled,Scheduled,Dispatched,Delayed,On The Way,On Site,Started,Paused,Resumed,To be invoiced,Invoiced,Partially Completed";
+        static string order_filter = "Unscheduled,Scheduled,Dispatched,Delayed,On The Way,On Site,Started,Paused,Resumed,To Be Invoiced,Invoiced,Partially Completed";
 
         static string expand_views = "agents, custom_fields, pictures, documents, equipment, equipment.custom_fields, techs_assigned, tasks, notes, products, services, other_charges, labor_charges, expenses, payments, invoices, signatures, printable_work_order, visits, visits.techs_assigned";
         public JobService()
@@ -91,7 +91,7 @@ namespace FusionZoho.ServiceFusionAPI
         {
             await SetAccessToken();
 
-            HttpResponseMessage response = await httpClient.GetAsync(apiBaseUrl + "jobs?page="  +page  + "&per-page=" + perpage+"&expand=" + expand_views + "filters[status]=" + order_filter);
+            HttpResponseMessage response = await httpClient.GetAsync(apiBaseUrl + "jobs?page="  +page  + "&per-page=" + perpage+"&expand=" + expand_views + "&filters[status]=" + order_filter);
 
             if (response.IsSuccessStatusCode)
             {

@@ -18,14 +18,14 @@ namespace FusionZoho.ZohoAPI
 
         }
 
-        // private ZohoAPI.Models.CreateSalesOrder ConvertFusionJobToZohoOrderObject(JobView jobView) {
-        //   var salesOrder = new ZohoAPI.Models.CreateSalesOrder();
+      //  private ZohoAPI.Models.CreateSalesOrder ConvertFusionJobToZohoOrderObject(JobView jobView) {
+        // var salesOrder = new ZohoAPI.Models.CreateSalesOrder();
 
-        // salesOrder.date = jobView.invoices[0]?.date?.ToString("yyyyMMdd");
-        // salesOrder.shipment_date = jobView.start_date?.ToString("yyyyMMdd");
+      //  salesOrder.date = jobView.invoices[0]?.date?.ToString("yyyyMMdd");
+      //  salesOrder.shipment_date = jobView.start_date?.ToString("yyyyMMdd");
 
 
-        //        }
-        ///}
+          //     }
+       // }
     }
 }
